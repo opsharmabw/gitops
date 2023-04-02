@@ -4,19 +4,19 @@ metadata:
   name: nginx-deployment
   namespace: myapp
   labels:
-    app: nginx
+    app: jenkins
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: jenkins
   template:
     metadata:
       labels:
-        app: nginx
+        app: jenkins
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: jenkins
+        image: jenkins/jenkins
         ports:
-        - containerPort: 80
+        - containerPort: 8080
