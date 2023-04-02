@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins
+      app: nginx
   template:
     metadata:
       labels:
